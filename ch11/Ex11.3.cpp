@@ -1,0 +1,23 @@
+/* 
+* @Author: anchen
+* @Date:   2015-02-26 11:16:41
+* @Last Modified by:   anchen
+* @Last Modified time: 2015-02-26 11:16:54
+*/
+
+#include <iostream>
+#include <string>
+#include <map>
+
+using namespace std;
+
+int main()
+{
+     map<string, size_t> word_count;
+     string word;
+     while (cin >> word)
+         ++word_count[word];
+     for (const auto &w : word_count)
+         cout << w.first << " occurs " << w.second
+         << ((w.second > 1) ? " times " : " time ") << endl;
+}
